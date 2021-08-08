@@ -1,10 +1,10 @@
-package controllers
+package Controllers
 
 import (
 	"encoding/json"
 	"errors"
-	models "go-service/models"
-	"go-service/utils"
+	models "go-service/Models"
+	utils "go-service/Utils"
 	"net/http"
 )
 

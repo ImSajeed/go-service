@@ -1,10 +1,10 @@
-package controllers
+package Controllers
 
 import (
 	"context"
 	"encoding/json"
-	models "go-service/models"
-	utils "go-service/utils"
+	models "go-service/Models"
+	utils "go-service/Utils"
 	"net/http"
 
 	"go.mongodb.org/mongo-driver/bson"

@@ -1,4 +1,4 @@
-package models
+package Models
 
 type InMemoryRecordsRequest struct {
 	Key   string `json:"key"`

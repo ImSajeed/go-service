@@ -1,4 +1,4 @@
-package utils
+package Utils
 
 type ErrorObject struct {
 	ErrorCode int
