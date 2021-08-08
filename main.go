@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	controllers "go-service/controllers"
+	controllers "go-service/Controllers"
 	"log"
 	"net/http"
 )
