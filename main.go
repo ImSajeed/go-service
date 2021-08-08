@@ -14,7 +14,7 @@ func main() {
 	http.HandleFunc("/in-memory", controllers.ProcessInMemoryRecords)
 
 	fmt.Printf("Starting server...\n")
-	if err := http.ListenAndServe(os.Getenv("PORT"), nil); err != nil {
+	if err := http.ListenAndServe(fmt.Sprintf("0.0.0.0:%s", os.Getenv("PORT")), nil); err != nil {
 		log.Fatal(err)
 	}
 }
