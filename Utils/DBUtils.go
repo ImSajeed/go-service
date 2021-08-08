@@ -61,14 +61,8 @@ type Configuration struct {
 	ConnectionString string
 }
 
-// GetConfiguration method basically populate configuration information from .env and return Configuration model
+// GetConfiguration method basically populate configuration information from os env and return Configuration model
 func GetConfiguration() Configuration {
-	// err := godotenv.Load("./.env")
-
-	// if err != nil {
-	// 	log.Fatalf("Error loading .env file")
-	// }
-
 	configuration := Configuration{
 		os.Getenv("PORT"),
 		os.Getenv("CONNECTION_STRING"),

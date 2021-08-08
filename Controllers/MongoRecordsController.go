@@ -29,6 +29,7 @@ func FetchMongoRecords(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
+	// creating mongo equivalent query
 	project := bson.D{primitive.E{Key: "$project", Value: bson.D{primitive.E{Key: "key", Value: "$key"}, primitive.E{Key: "createdAt", Value: "$createdAt"},
 		primitive.E{Key: "totalCount", Value: bson.D{primitive.E{Key: "$sum", Value: "$counts"}}}},
 	}}
@@ -52,9 +53,10 @@ func FetchMongoRecords(w http.ResponseWriter, req *http.Request) {
 		return
 	}
 
-	recordResponse.Records = records
 	recordResponse.Code = 0
 	recordResponse.Msg = "success"
+	recordResponse.Records = records
+
 	json.NewEncoder(w).Encode(recordResponse)
 
 }
