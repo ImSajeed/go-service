@@ -30,4 +30,4 @@ curl --location --request POST 'http://localhost:8090/in-memory' \
 
 GET /in-memorry?key=value
 
-curl --location --request GET 'https://go-poc.herokuapp.com/in-memory?key=active-tabs'
+curl --location --request GET 'http://localhost:8090/in-memory?key=active-tabs'
